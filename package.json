@@ -1,6 +1,10 @@
 {
   "name": "admin-panel",
   "version": "0.0.0",
+  "engines": {
+    "npm": "9.6.5",
+    "node": "16.14.2"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
