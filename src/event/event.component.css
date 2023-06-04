@@ -1,0 +1,32 @@
+/* data-table.component.css */
+h2 {
+  margin-bottom: 20px;
+}
+
+button {
+  margin-bottom: 10px;
+  width: 50px;
+}
+
+th {
+  padding: 5px;
+}
+
+/* modal.component.css */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+mat-table {
+  border: 2px solid lightgrey;
+  border-radius: 30px;
+  padding: 5px;
+}
+
+.table-container {
+  position: relative;
+  margin: auto;
+  align-content: center;
+  width: 90%;
+}

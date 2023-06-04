@@ -1,0 +1,59 @@
+<div class="container">
+  <h2 mat-dialog-title>{{ data ? 'Edit Event' : 'Add Event' }}</h2>
+  <mat-dialog-content>
+    <form>
+      <button *ngIf="data.isMain" mat-button (click)="unsetAsMain()">Убрать из главных событий</button>
+      <button *ngIf="!data.isMain" mat-button (click)="setAsMain()">Сделать главным событием</button>
+
+      <mat-form-field>
+        <input matInput placeholder="Name" [(ngModel)]="data.name" name="name" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Type" [(ngModel)]="data.type" name="type" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Short Description" [(ngModel)]="data.shortDescription" name="shortDescription"
+               required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Time" [(ngModel)]="data.time" name="time" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Running Time" [(ngModel)]="data.runningTime" name="runningTime" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Constraints" [(ngModel)]="data.constraints" name="constraints" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Started At" [(ngModel)]="data.startedAt" name="startedAt" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Limit" [(ngModel)]="data.limit" name="limit" required>
+      </mat-form-field>
+      <mat-form-field>
+          <textarea matInput placeholder="Description" [(ngModel)]="data.description" name="description"
+                    required></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Location" [(ngModel)]="data.location" name="location" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Ended At" [(ngModel)]="data.endedAt" name="endedAt" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Organization ID" [(ngModel)]="data.organizationId" name="organizationId"
+               required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="YouTube URL" [(ngModel)]="data.ytUrl" name="ytUrl" required>
+      </mat-form-field>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button (click)="onCancel()">Cancel</button>
+    <button mat-button color="primary"
+            [disabled]="!data.name || !data.type || !data.shortDescription || !data.time || !data.runningTime || !data.constraints || !data.startedAt || !data.limit || !data.description || !data.location || !data.endedAt || !data.organizationId || !data.ytUrl"
+            (click)="onSave()">Save
+    </button>
+  </mat-dialog-actions>
+</div>

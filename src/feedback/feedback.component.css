@@ -1,0 +1,12 @@
+mat-table {
+  border: 2px solid lightgrey;
+  border-radius: 30px;
+  padding: 5px;
+}
+
+.table-container {
+  position: relative;
+  margin: auto;
+  align-content: center;
+  width: 60%;
+}

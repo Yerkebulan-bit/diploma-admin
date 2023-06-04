@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>{{ data ? 'Edit Item' : 'Add Item' }}</h2>
+<div mat-dialog-content>
+  <button mat-button (click)="disable()">Disable</button>
+  <button mat-button (click)="enable()">Enable</button>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Username" [(ngModel)]="item.username"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Name" [(ngModel)]="item.name">
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="Description" [(ngModel)]="item.surname"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="Birthday" [(ngModel)]="item.birth"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="Email" [(ngModel)]="item.email"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="About" [(ngModel)]="item.about"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="Phone" [(ngModel)]="item.phone"></textarea>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-button color="primary" (click)="save()">Save</button>
+</div>

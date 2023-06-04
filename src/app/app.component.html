@@ -1,0 +1,31 @@
+<app-form></app-form>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <a *ngFor="let route of routes"
+         mat-list-item
+         [routerLink]="route.path"
+         (click)="sidenav.toggle()"> {{route.label}}</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div>
+      <mat-toolbar color="primary">
+        <button  mat-icon-button
+                 aria-label="Menu"
+                 (click)="sidenav.open()">
+          <mat-icon>Menu</mat-icon>
+        </button>
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<!--<app-data-table></app-data-table>-->
+
+<!--<app-feedback-table></app-feedback-table>-->
+
+<!--<app-user-table></app-user-table>-->
